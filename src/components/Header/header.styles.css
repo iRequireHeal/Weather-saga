@@ -1,0 +1,9 @@
+.cont {
+    display: flex;
+    margin: 1em 4em;
+    justify-content: space-between;
+    font-size: 1.7em;
+}
+.menuItem {
+    margin: 0 2em;
+}

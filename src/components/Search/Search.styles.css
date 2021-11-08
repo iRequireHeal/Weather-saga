@@ -1,0 +1,17 @@
+.search {
+    width: 20em;
+    font-size: 1.2em;
+    border: 2px solid darkviolet;
+    -webkit-border-radius: 10px;
+    padding: 6px 10px;
+    vertical-align: middle;
+    color: aqua;
+    background: transparent;
+}
+.search::placeholder {
+    color: #61dafb;
+}
+
+.searchButton {
+    font-size: 1.2em;
+}
