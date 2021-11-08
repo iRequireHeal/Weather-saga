@@ -1,0 +1,19 @@
+.title {
+    margin: 5px;
+    text-align: center;
+    color: aqua;
+}
+
+.data {
+    color: aqua;
+    margin: 5px 20px 10px;
+}
+
+.conteiner {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px  aqua solid;
+    width: 400px;
+    -webkit-border-radius: 20px;
+}

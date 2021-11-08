@@ -2,12 +2,9 @@ import './header.styles.css'
 
 export const Header = () => {
     return (
-        <div className="cont">
-            <a href="#"><img src="" alt=""/>git</a>
-            <div className="menu">
-                <a className="menuItem" href="#"><img src="" alt=""/>git</a>
-                <a className="menuItem" href="#"><img src="" alt=""/>theme</a>
-            </div>
+        <div className="headerCont">
+            <a className="menuItem" href="">Weather app</a>
+            <a className="menuItem" href="https://github.com/iRequireHeal/Weather-saga" target="_blank" rel="noopener">git</a>
         </div>
     )
 }

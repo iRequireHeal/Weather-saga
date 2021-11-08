@@ -1,8 +1,9 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
-    city: "null",
+    city: null,
     temp: null,
+    humidity: null,
     wind: {
         windSpeed: null,
         windDegree: null
@@ -11,8 +12,8 @@ const initialState = {
     isLoading: null
 }
 
-const convertTemp = (F) => {
-    return (F/18).toFixed(2)
+const convertTemp = (k) => {
+    return (k-273.15).toFixed(2)
 }
 
 export const weatherSlice = createSlice({
@@ -29,6 +30,7 @@ export const weatherSlice = createSlice({
 
                 state.city = action.payload.name
                 state.temp = convertTemp(action.payload.main.temp)
+                state.humidity = action.payload.main.humidity
                 state.wind = {
                     windSpeed:action.payload.wind.speed,
                     windDegree:action.payload.wind.deg
@@ -43,6 +45,3 @@ export const weatherSlice = createSlice({
 )
 
 export const {requestWeather, requestWeatherFail, requestWeatherSuccess} = weatherSlice.actions
-
-
-export default weatherSlice.reducer

@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
-import {getInput} from "./SearchSlice";
+import {getInput} from "../../store/modules/search/SearchSlice";
 import './Search.styles.css'
 
 export const Search = () => {
@@ -11,7 +11,7 @@ export const Search = () => {
         setCity(e.target.value)
     }
 
-    let getData = async (e) => {
+    const getData = (e) => {
         if (e.key === 'Enter' && city) {
             dispatch(getInput(city))
             setCity('')

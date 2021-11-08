@@ -3,10 +3,10 @@ import {
     requestWeather,
     requestWeatherFail,
     requestWeatherSuccess
-} from "../components/Weather/WeatherSlice";
+} from "./modules/weather/WeatherSlice";
 
-import {getInput} from "../components/Search/SearchSlice";
-import {selectInput} from "./selectors";
+import {getInput} from "./modules/search/SearchSlice";
+import {selectInput} from "./modules/search/selectors";
 
 function* getWeather() {
     {
@@ -14,7 +14,7 @@ function* getWeather() {
             requestWeather()
             const city = yield select(selectInput)
             const data = yield call(() => {
-                    return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},&appid=d2ee61d7aa3a4488bcab4c8087121705`)
+                    return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},&appid=d2ee61d7aa3a4488bcab4c8087121705`)
                         .then(res => res.json())
                 }
             );
